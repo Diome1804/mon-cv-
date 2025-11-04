@@ -1,166 +1,523 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CV Développeur Full-Stack Web & Mobile</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Abdoulaye Diome</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        color: #1a1a2e;
-      }
-      body {
-        background: #f0f2f5;
-        padding: 20px;
-        display: flex;
-        justify-content: center;
-      }
-      .container {
-        background: #fff;
-        max-width: 900px;
-        width: 100%;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        padding: 30px;
-        border-radius: 10px;
-      }
-      header {
-        text-align: center;
-        margin-bottom: 30px;
-      }
-      header h1 {
-        font-size: 2.5rem;
-        color: #0f52ba;
-      }
-      header h2 {
-        font-size: 1.2rem;
-        color: #555;
-        margin-top: 10px;
-      }
-      .contact {
-        margin-top: 10px;
-        font-size: 0.95rem;
-      }
-      section {
-        margin-bottom: 30px;
-      }
-      h3 {
-        border-bottom: 2px solid #0f52ba;
-        padding-bottom: 5px;
-        margin-bottom: 15px;
-        color: #0f52ba;
-      }
-      ul {
-        list-style: none;
-      }
-      li {
-        margin-bottom: 10px;
-      }
-      .skills span {
-        background: #e0e7ff;
-        padding: 8px 12px;
-        border-radius: 20px;
-        margin: 5px;
-        display: inline-block;
-        font-weight: 500;
-      }
-      @media screen and (max-width: 600px) {
-        header h1 {
-          font-size: 1.8rem;
+        :root {
+            --color-primary: #117A65; /* vert profond */
+            --color-accent:  #2ECC71; /* vert clair */
+            --color-neutral: #10221A; /* très foncé */
+            --color-bg:      #FFFFFF; /* fond */
+            --color-muted:   #9DBAA7; /* muted */
+            --accent-weak:   rgba(18,122,101,0.06);
         }
-        header h2 {
-          font-size: 1rem;
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--color-neutral);
+            background: var(--color-bg);
+            padding: 40px;
+            font-weight: 300;
+        }
+
         .container {
-          padding: 15px;
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
         }
-      }
+
+        header {
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 42px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 5px;
+            letter-spacing: 1px;
+        }
+
+        .subtitle {
+            font-size: 16px;
+            color: var(--color-primary);
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            font-size: 13px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .contact-item i {
+            width: 16px;
+            color: #2196F3;
+            text-align: center;
+        }
+
+        .contact-item a {
+            color: #2196F3;
+            text-decoration: none;
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+        }
+
+        .left-column {
+            padding-right: 20px;
+        }
+
+        .right-column {
+            padding-left: 20px;
+            border-left: 2px solid #e0e0e0;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #1a1a1a;
+            text-transform: uppercase;
+        }
+
+        .section {
+            margin-bottom: 35px;
+        }
+
+        .summary-text {
+            font-size: 14px;
+            line-height: 1.8;
+            color: #333;
+            text-align: justify;
+        }
+
+        .experience-item, .education-item, .project-item {
+            margin-bottom: 25px;
+        }
+
+        .job-title, .project-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #1a1a1a;
+            margin-bottom: 5px;
+        }
+
+        .company-name, .school-name {
+            font-size: 14px;
+            color: var(--color-primary);
+            font-weight: 600;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+
+        .job-details {
+            display: flex;
+            gap: 15px;
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .job-details span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .tech-stack {
+            font-size: 13px;
+            color: var(--color-muted);
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .job-description {
+            font-size: 13px;
+            color: var(--color-neutral);
+            line-height: 1.7;
+            margin-bottom: 8px;
+        }
+
+        .job-description ul {
+            margin-left: 20px;
+            margin-top: 8px;
+        }
+
+        .job-description li {
+            margin-bottom: 5px;
+        }
+
+        .link {
+            font-size: 12px;
+            color: var(--color-primary);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .right-column h2 {
+            font-size: 18px;
+        }
+
+        .cert-item {
+            margin-bottom: 20px;
+        }
+
+        .cert-title {
+            font-size: 14px;
+            color: #2196F3;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .cert-description {
+            font-size: 13px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-tag {
+            background: var(--accent-weak);
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--color-neutral);
+            border: 1px solid var(--color-muted);
+        }
+
+        .skill-category {
+            margin-bottom: 15px;
+        }
+
+        .skill-category-title {
+            font-size: 13px;
+            font-weight: bold;
+            color: #555;
+            margin-bottom: 8px;
+        }
+
+        .languages-list, .interests-list {
+            font-size: 13px;
+            color: #333;
+            line-height: 2;
+        }
+
+        h2 {
+            border-bottom-color: var(--color-primary);
+        }
+
+        .contact-item i {
+            color: var(--color-primary);
+        }
+
+        a {
+            color: var(--color-primary);
+        }
+
+        /* Print styles */
+        @media print {
+            body {
+                padding: 0;
+            }
+            .main-content {
+                grid-template-columns: 2fr 1fr;
+            }
+        }
     </style>
-  </head>
-  <body>
+</head>
+<body>
     <div class="container">
-      <header>
-        <h1>Abdoulaye Diome</h1>
-        <h2>Développeur Full-Stack Web & Mobile | DevOps | UX/UI Designer</h2>
-        <div class="contact">
-          📧 a.diome4@isepdiamniadio.edu.sn | 📞 +221 77 823 22 95 <br />
-          🔗 https://github.com/Diome1804 | 🔗
-          https://www.linkedin.com/in/abdoulaye-diome-2b595a320/
+        <header>
+            <h1>ABDOULAYE DIOME</h1>
+            <div class="subtitle">DÉVELOPPEUR FULL-STACK WEB & MOBILE | DEVOPS | UX/UI DESIGNER</div>
+            <div class="contact-info">
+                <div class="contact-item"><i class="fas fa-phone"></i> +221 77 823 22 95</div>
+                <div class="contact-item"><i class="fas fa-envelope"></i> a.diome4@isepdiamniadio.edu.sn</div>
+                <div class="contact-item"><i class="fab fa-github"></i> <a href="https://github.com/Diome1804" target="_blank">GitHub</a></div>
+                <div class="contact-item"><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/abdoulaye-diome-2b595a320/" target="_blank">LinkedIn</a></div>
+                <div class="contact-item"><i class="fas fa-map-marker-alt"></i> Dakar, Sénégal</div>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <div class="left-column">
+                <!-- SUMMARY -->
+                <div class="section">
+                    <h2>Résumé Professionnel</h2>
+                    <p class="summary-text">
+                        Développeur Full-Stack Web et Mobile, capable de concevoir des applications modernes avec une attention portée à l'expérience utilisateur, la performance et la maintenabilité. Habitué à travailler sur l'ensemble du cycle de développement, du front-end au back-end, avec un souci constant de qualité. Je m'initie également aux bonnes pratiques DevOps et au déploiement cloud.
+                    </p>
+                </div>
+
+                <!-- EXPERIENCE -->
+                <div class="section">
+                    <h2>Expérience</h2>
+
+                    <div class="project-item">
+                        <div class="job-title">Bank Manager API</div>
+                        <div class="company-name">ORANGE DIGITAL CENTER - SONATEL ACADÉMIE</div>
+                        <div class="job-details">
+                            <span><i class="far fa-clock"></i> [20jours] (Octobre 2025)</span>
+                            <span><i class="fas fa-map-pin"></i> Dakar, Sénégal</span>
+                        </div>
+                        <div class="job-details">
+                            <span><i class="fas fa-user-tie"></i> Encadré par : [Birane Baila Wane]</span>
+                        </div>
+                        <a href="https://banktt.onrender.com" class="link" target="_blank"><i class="fas fa-globe"></i> https://banktt.onrender.com</a>
+                        <div class="tech-stack">Technologies: Laravel, PostgreSQL, Swagger, Docker, REST API</div>
+                        <div class="job-description">
+                            API RESTful complète pour la gestion de comptes bancaires
+                            <ul>
+                                <li>API RESTful complète pour la gestion de comptes bancaires : conception et développement respectant les standards REST (versioning, pagination, HATEOAS)</li>
+                                <li>Documentation interactive Swagger/OpenAPI, authentification sécurisée Laravel Sanctum (Bearer tokens)</li>
+                                <li>CRUD complet des comptes avec transactions et filtres avancés</li>
+                                <li>Déploiement Render avec Docker/CI/CD, tests et gestion d'erreurs HTTP</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="job-title">Système de Gestion des Salaires et Présences QR</div>
+                        <div class="company-name">ORANGE DIGITAL CENTER - SONATEL ACADÉMIE</div>
+                        <div class="job-details">
+                            <span><i class="far fa-clock"></i> [15 jours] (Octobre 2025)</span>
+                            <span><i class="fas fa-map-pin"></i> Dakar, Sénégal</span>
+                        </div>
+                        <div class="job-details">
+                            <span><i class="fas fa-user-tie"></i> Encadré par : [Aly Tall Niang]</span>
+                        </div>
+                        <div class="tech-stack">Technologies : React.js, Node.js, Express, Prisma, MongoDB, Tailwind CSS , TypeScript</div>
+                        <div class="job-description">
+                            <!-- Application de messagerie instantanée en temps réel -->
+                            <ul>
+                                <li>Développement d'une application full-stack de gestion des salaires avec système de présence intégré utilisant des codes QR, dans le cadre de la formation à l'ORANGE DIGITAL CENTER - SONATEL ACADÉMIE</li>
+                                <li>Implémentation d'un système d'authentification sécurisée avec gestion des rôles multiples (SUPERADMIN, ADMIN, CAISSIER, EMPLOYÉ, VIGILE) pour assurer la confidentialité et la sécurité des données</li>
+                                <li>Intégration d'un système de présence en temps réel avec génération et scan de codes QR pour le pointage des employés, incluant check-in/check-out automatique et calcul des heures travaillées</li>
+                                <li>Conception d'une interface utilisateur moderne, responsive et intuitive utilisant Tailwind CSS, optimisée pour une expérience utilisateur fluide sur différents appareils (desktop, mobile, tablette)</li>
+                                <li>Gestion de l'état global de l'application avec Context API, couplée à la persistance des données de présence, salaires et paiements en base MongoDB via Prisma ORM</li>
+                                <li>Mise en place d'un système de notifications par email pour l'envoi des codes QR aux employés et des bulletins de salaire, ainsi que d'indicateurs de statut pour le suivi des paiements et présences</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- <div class="project-item">
+                        <div class="job-title">Application de Gestion Scolaire</div>
+                        <div class="company-name">ORANGE DIGITAL CENTER - SONATEL ACADÉMIE</div>
+                        <div class="job-details">
+                            <span><i class="far fa-clock"></i> [XX jours] (Septembre 2024)</span>
+                            <span><i class="fas fa-map-pin"></i> Dakar, Sénégal</span>
+                        </div>
+                        <div class="job-details">
+                            <span><i class="fas fa-user-tie"></i> Encadré par : [Nom du formateur]</span>
+                        </div>
+                        <div class="tech-stack">Technologies: PHP, HTML5, CSS3, JavaScript, JSON</div>
+                        <div class="job-description">
+                            Système de gestion pour établissement scolaire
+                            <ul>
+                                <li>Développement d'un système de gestion avec différents profils utilisateurs (admin, apprenant, surveillant)</li>
+                                <li>Création d'un système d'authentification et d'autorisation basé sur les rôles</li>
+                                <li>Gestion des données avec JSON et stockage en fichiers locaux</li>
+                                <li>Interface utilisateur responsive et intuitive adaptée aux différents profils</li>
+                                <li>Module d'administration complet pour la gestion des utilisateurs et des permissions</li>
+                                <li>Implémentation de fonctionnalités de suivi des présences et des notes</li>
+                            </ul>
+                        </div>
+                    </div> -->
+                </div>
+
+                <!-- EDUCATION -->
+                <div class="section">
+                    <h2>Formation</h2>
+
+                    <div class="education-item">
+                        <div class="job-title">Apprenant - Orange Digital Center</div>
+                        <div class="company-name">SONATEL ACADÉMIE</div>
+                        <div class="job-details">
+                            <span><i class="far fa-calendar-alt"></i> 2025</span>
+                            <span><i class="fas fa-map-pin"></i> Dakar, Sénégal</span>
+                        </div>
+                        <div class="job-description">
+                            Développement Full Stack Web et Mobile
+                            <ul>
+                                <li>Formation intensive en développement web moderne</li>
+                                <li>Méthodologies Agile/Scrum</li>
+                                <li>Pratiques DevOps et déploiement continu</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="education-item">
+                        <div class="job-title">Licence 2 en Informatique</div>
+                        <div class="company-name">ISEP AMADOU TRAORE DE DIAMNIADIO</div>
+                        <div class="job-details">
+                            <span><i class="far fa-calendar-alt"></i> 2023 - 2024</span>
+                            <span><i class="fas fa-map-pin"></i> Diamniadio, Sénégal</span>
+                        </div>
+                        <div class="job-description">
+                            Développement Web et Mobile
+                        </div>
+                    </div>
+
+                    <div class="education-item">
+                        <div class="job-title">Licence 1 en Informatique</div>
+                        <div class="company-name">ISEP DE DIAMNIADIO</div>
+                        <div class="job-details">
+                            <span><i class="far fa-calendar-alt"></i> 2022 - 2023</span>
+                            <span><i class="fas fa-map-pin"></i> Diamniadio, Sénégal</span>
+                        </div>
+                        <div class="job-description">
+                            Développement Web et Mobile
+                        </div>
+                    </div>
+
+                    <div class="education-item">
+                        <div class="job-title">Baccalauréat Série L2</div>
+                        <div class="job-details">
+                            <span><i class="far fa-calendar-alt"></i> 2021 - 2022</span>
+                            <span><i class="fas fa-map-pin"></i> Sénégal</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-column">
+                <!-- SKILLS -->
+                <div class="section">
+                    <h2>Compétences</h2>
+                    
+                    <div class="skill-category">
+                        <div class="skill-category-title">Frontend</div>
+                        <div class="skills-grid">
+                            <div class="skill-tag">HTML5</div>
+                            <div class="skill-tag">CSS3</div>
+                            <div class="skill-tag">JavaScript</div>
+                            <div class="skill-tag">React.js</div>
+                            <div class="skill-tag">Angular</div>
+                            <div class="skill-tag">TypeScript</div>
+                            <!-- <div class="skill-tag">Vue.js</div> -->
+                            <div class="skill-tag">Next.js</div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <div class="skill-category-title">Backend</div>
+                        <div class="skills-grid">
+                            <div class="skill-tag">Node.js</div>
+                            <div class="skill-tag">Express</div>
+                            <div class="skill-tag">PHP</div>
+                            <div class="skill-tag">Laravel</div>
+                            <div class="skill-tag">Java</div>
+                            <div class="skill-tag">Spring</div>
+                            <div class="skill-tag">TypeScript</div>
+
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <div class="skill-category-title">Mobile</div>
+                        <div class="skills-grid">
+                            <div class="skill-tag">Flutter</div>
+                            <!-- <div class="skill-tag">Ionic</div> -->
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <div class="skill-category-title">Bases de Données</div>
+                        <div class="skills-grid">
+                            <div class="skill-tag">MongoDB</div>
+                            <div class="skill-tag">PostgreSQL</div>
+                            <div class="skill-tag">MySQL</div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <div class="skill-category-title">DevOps & Outils</div>
+                        <div class="skills-grid">
+                            <div class="skill-tag">Docker</div>
+                            <div class="skill-tag">Jenkins</div>
+                            <div class="skill-tag">CI/CD</div>
+                            <div class="skill-tag">GitHub Actions</div>
+                            <div class="skill-tag">GitLab CI</div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <div class="skill-category-title">Design & Méthodologies</div>
+                        <div class="skills-grid">
+                            <div class="skill-tag">Figma</div>
+                            <div class="skill-tag">UI/UX Design</div>
+                            <!-- <div class="skill-tag">Agile/Scrum</div> -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LANGUAGES -->
+                <div class="section">
+                    <h2>Langues</h2>
+                    <div class="languages-list">
+                        <div><strong>Français</strong> : Courant</div>
+                        <div><strong>Anglais</strong> : Intermédiaire</div>
+                        <div><strong>Wolof</strong> : Langue Maternelle</div>
+                    </div>
+                </div>
+
+                <!-- CERTIFICATIONS -->
+                <div class="section">
+                    <h2>Certifications</h2>
+                    <!-- <div class="languages-list">
+                        <div><strong>Français</strong> : Courant</div>
+                        <div><strong>Anglais</strong> : Intermédiaire</div>
+                        <div><strong>Wolof</strong> : Langue Maternelle</div>
+                    </div> -->
+                </div>
+
+                <!-- INTERESTS -->
+                <div class="section">
+                    <h2>Intérêts & Loisirs</h2>
+                    <div class="interests-list">
+                        <div><i class="fas fa-book"></i> Lecture</div>
+                        <div><i class="fas fa-bullseye"></i> Apprentissage de nouvelles compétences</div>
+                        <div><i class="fas fa-basketball-ball"></i> Basketball</div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </header>
-
-      <section>
-        <h3>Résumé Professionnel</h3>
-        <p>
-          Développeur Full-Stack Web et Mobile, capable de concevoir des applications modernes avec une attention portée à l’expérience utilisateur, la performance et la maintenabilité. Habitué à travailler sur l’ensemble du cycle de développement, du front-end au back-end, avec un souci constant de qualité. Je m’initie également aux bonnes pratiques DevOps et au déploiement cloud.
-        </p>
-      </section>
-
-      <section>
-        <h3>Compétences Techniques</h3>
-        <div class="skills">
-          <span>HTML5</span><span>CSS3</span><span>JavaScript (ES6+)</span
-          ><span>React js</span><span>Angular</span> <span>Vue.js</span
-          ><span>Node.js</span><span>Express</span><span>MongoDB</span>
-          <span>PostgreSQL</span><span>Docker</span><span>Java</span
-          >
-          <!-- <span>Jenkins</span> <span>CI/CD (GitHub Actions, GitLab CI)</span> -->
-          <span>Figma</span><span>UI/UX Design</span> <span>Flutter</span
-          ><span>ionic</span><span>PHP</span>
-          <span>Agile / Scrum</span>
-          <span>Laravel</span>
-          <span>Spring</span>
-          <span>Next.js</span>
-        </div>
-      </section>
-
-      <section>
-        <h3>Projets Réalisés</h3>
-        <ul>
-          <li>
-            <strong>🔹 Clone WhatsApp (Frontend + Backend) </strong> : Application de messagerie en temps réel avec interface inspirée de WhatsApp.
-          </li>
-          <li>
-            <strong>🔹 Application de gestion scolaire</strong> : Développement d’un système de gestion pour une école avec différents profils utilisateurs (admin, apprenant, surveillant) avec PHP, HTML, CSS, JSON / fichiers locaux
-          </li>
-          <li>
-             <strong>🔹 Application Mobile de suivi de colis</strong> : Suivi temps réel des expéditions avec notifications push (React js ,Node js).
-          </li>
-          <li>
-             <strong>🔹 Gestion des Salaires (Multi-entreprises)</strong> : Application web avec rôles (Super-admin, Admin, Caissier), gestion de paie et génération de reçus PDF (Node.js, React, MySQL).
-          </li>  
-        </ul>
-      </section>
-
-      <section>
-        <h3>Certifications & Formations</h3>
-        <ul>
-          <li>🔹 2025 : Apprenant à l’orange Digital Center (SONATEL ACADÉMIE), en développement full stack web et mobile.</li>
-          <li>🔹 2023 – 2024 : Licence 2 en informatique Développement Web et Mobile à l’ISEP Amadou Traore de Diamniadio.</li>
-          <li>🔹 2022 – 2023 : Licence 1 en informatique Développement Web et Mobile à l’ISEP de Diamniadio.</li>
-          <li>🔹 2021 - 2022 : Baccalauréat série (L2)</li>
-        </ul>
-      </section>
-
-      <section>
-        <h3>Langues</h3>
-        <ul>
-          <li>Français : Courant</li>
-          <li>Anglais : Intermédiaire</li>
-          <li>Wolof : Langue Maternelle</li>
-        </ul>
-      </section>
-
-      <section>
-        <h3>Intérêts & Loisirs</h3>
-        <ul>
-          <li>🔹 Lecture</li>
-          <li>🔹 Apprentissage de nouvelles compétences</li>
-          <li>🔹 Basketball</li>
-        </ul>
-      </section>
     </div>
-  </body>
+</body>
 </html>
